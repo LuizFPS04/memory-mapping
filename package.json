@@ -12,7 +12,8 @@
     },
     "keywords": [
       "MIPS",
-      "pipeline"
+      "pipeline",
+      "cache"
     ],
     "author": "Luiz Felipe",
     "license": "ISC",
