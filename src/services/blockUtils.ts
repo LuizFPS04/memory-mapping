@@ -20,8 +20,10 @@ export function accessBlocks(block: number, blocks: number[], hit: number, miss:
     if (blocks.indexOf(block) != -1) {
         hit += 1;
     } else {
-        blocks.push(block);
-        miss += 1;
+        if (!isNaN(block)) {
+            blocks.push(block);
+            miss += 1;
+        }
     }
     return { hit, miss };
 }

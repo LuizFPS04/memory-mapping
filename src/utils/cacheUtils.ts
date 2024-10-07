@@ -1,5 +1,3 @@
-export function exponent(index: number): number {
-    if (index == 1) return 0;
-
-    return 1 + exponent(Math.floor(index/2));
+export function exponent(value: number): number {
+    return Math.log2(value);
 }

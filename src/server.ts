@@ -6,8 +6,8 @@ import { readFile, writeFile, getTestFiles } from "./utils/loadFile";
 import { TCache } from './types/cacheType';
 import { mappingCache } from './services/cache';
 
-const directory = "C://Users//luizf//OneDrive//Área de Trabalho//memory-mapping//src//docs";
-const directoryDestiny = path.resolve(__dirname, './docs');
+const directory = "C://Users//upflo//OneDrive//Área de Trabalho//IFMG/memory-mapping//src//docs";
+const directoryDestiny = path.resolve(__dirname, './doc-parsed');
 const files = getTestFiles(directory);
 
 files.forEach(file => {

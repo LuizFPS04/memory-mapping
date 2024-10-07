@@ -29,6 +29,9 @@ export function mappingCache(cacheObj: TCache): number[] {
 }
 
 function directMapping(addressCache: number[], cacheSize: number, cacheLines: number, cacheWords: number, cacheGroup: number): number[] {
+
+    console.log("Direct");
+
     let result: number[] = [];
     let blocks: number[] = [];
     let hit = 0, miss = 0;
@@ -62,6 +65,10 @@ function directMapping(addressCache: number[], cacheSize: number, cacheLines: nu
 }
 
 function associativeMapping(addressCache: number[], cacheSize: number, cacheLines: number, cacheWords: number, cacheGroup: number): number[] {
+
+    console.log("Associative");
+
+
     let result: number[] = [];
     let blocks: number[] = [];
     let hit = 0, miss = 0;
@@ -94,14 +101,16 @@ function associativeMapping(addressCache: number[], cacheSize: number, cacheLine
 }
 
 function associativeGroupMapping(addressCache: number[], cacheSize: number, cacheLines: number, cacheWords: number, cacheGroup: number): number[] {
+
+    console.log("Associative Group");
+
     let result: number[] = [];
     let blocks: number[] = [];
     let hit = 0, miss = 0;
 
     const bitsBlock: number = blockBits(cacheWords);
     const bitsGroup: number = groupBits(cacheLines, cacheGroup);
-    let linesExponent: number = exponent(bitsGroup);
-    linesExponent = tagBits(linesExponent, cacheSize, cacheWords);
+    let linesExponent: number = tagBits(bitsGroup, cacheSize, cacheWords);
     
     console.log(`Line 1 (Block): ${bitsBlock}`);
     console.log(`Line 2 (Group): ${bitsGroup}`);
