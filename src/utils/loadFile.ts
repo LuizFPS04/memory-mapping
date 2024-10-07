@@ -10,6 +10,5 @@ export function writeFile(filePath: string, content: number[]): void {
 }
 
 export function getTestFiles(directory: string): string[] {
-    return fs.readdirSync(directory)
-        .filter(file => file.startsWith('TESTE-') && file.endsWith('.txt'));
+    return fs.readdirSync(directory).filter(file => file.startsWith('TESTE-') && file.endsWith('.txt'));
 }

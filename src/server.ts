@@ -1,6 +1,5 @@
 import * as path from 'path';
 
-/* import { calculateCache } from "./services/cache"; */
 import { cacheInstructions } from "./utils/cacheInstructions";
 import { readFile, writeFile, getTestFiles } from "./utils/loadFile";
 import { TCache } from './types/cacheType';
